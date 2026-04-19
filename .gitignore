@@ -1,0 +1,18 @@
+# Documentos institucionales (no son parte del sitio web)
+LOGOS/
+NORMAS GRÁFICAS/
+*.pdf
+*.docx
+
+# Claude Code (configuración local del editor)
+.claude/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+*.swp
+*~

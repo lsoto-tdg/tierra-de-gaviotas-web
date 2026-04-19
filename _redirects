@@ -1,0 +1,5 @@
+# Forzar HTTPS y eliminar www
+# Cloudflare Pages gestiona HTTPS automáticamente, estas reglas son redundancia.
+http://tierradegaviotas.cl/* https://tierradegaviotas.cl/:splat 301!
+http://www.tierradegaviotas.cl/* https://tierradegaviotas.cl/:splat 301!
+https://www.tierradegaviotas.cl/* https://tierradegaviotas.cl/:splat 301!
