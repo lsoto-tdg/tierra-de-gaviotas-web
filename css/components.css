@@ -276,24 +276,19 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  /* [PLACEHOLDER: reemplazar con imagen real de Chiloé/festival] */
-  background: linear-gradient(160deg, #1a0d05 0%, #2d1a0a 35%, #3d2210 60%, #1e0e04 100%);
-  background-image: url('../images/hero/hero-chiloe.jpg');
-  background-size: cover;
-  background-position: center 40%;
+  /* CAMBIO 2 — Imagen real de Chiloé. Reemplazar con foto oficial de TDG. */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(53, 33, 18, 0.55) 0%,
+      rgba(53, 33, 18, 0.75) 100%
+    ),
+    url('../images/hero/hero-chiloe.jpg') center / cover no-repeat;
+  /* Fallback si la imagen no carga aún: */
+  background-color: var(--color-cafe-oscuro);
 }
 
-.hero__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(30, 12, 4, 0.90) 0%,
-    rgba(53, 33, 18, 0.75) 50%,
-    rgba(53, 33, 18, 0.55) 100%
-  );
-}
+/* Overlay integrado en el background shorthand del .hero__bg */
 
 /* Textura sutil */
 .hero__bg::before {
@@ -1119,16 +1114,26 @@
   overflow: hidden;
 }
 
+/* CAMBIO 4 — Isotipo TDG como decoración del CTA */
 .cta-banner::before {
   content: '';
   position: absolute;
-  top: -50%;
+  top: -20%;
   right: -10%;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: rgba(255, 182, 0, 0.05);
+  width: 480px;
+  height: 480px;
+  background-image: url('../images/logo/TDG_1_Vertical_-_Para_fondo_oscuro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
   pointer-events: none;
+  z-index: 1;
+}
+
+.cta-banner > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .cta-banner h2 {

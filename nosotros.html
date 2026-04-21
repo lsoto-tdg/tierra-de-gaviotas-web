@@ -34,6 +34,7 @@
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/components-v2.css">
   <link rel="stylesheet" href="css/responsive.css">
 
   <script type="application/ld+json">
@@ -70,6 +71,7 @@
           <li><a href="programas.html"    class="navbar__link">Programas</a></li>
           <li><a href="voluntariado.html" class="navbar__link">Voluntariado</a></li>
           <li><a href="noticias.html"     class="navbar__link">Noticias</a></li>
+          <li><a href="manual-grafico.html" class="navbar__link">Manual gráfico</a></li>
           <li><a href="contacto.html"     class="navbar__link">Contacto</a></li>
         </ul>
         <a href="donaciones.html" class="btn btn--ambar navbar__cta">Apóyanos</a>
@@ -79,19 +81,19 @@
 
   <main id="main-content" role="main">
 
-    <!-- PAGE HERO -->
-    <section class="page-hero" aria-labelledby="ph-title">
+    <!-- PAGE HERO — CAMBIO 3 -->
+    <section class="page-hero" aria-labelledby="ph-title"
+             style="background-image: url('images/hero/hero-nosotros.jpg');">
       <div class="container page-hero__content">
         <nav class="breadcrumb" aria-label="Ruta de navegación">
           <a href="index.html">Inicio</a>
           <span class="breadcrumb__sep" aria-hidden="true">›</span>
           <span class="breadcrumb__current" aria-current="page">Nosotros</span>
         </nav>
-        <span class="label page-hero__label">Quiénes somos</span>
-        <h1 id="ph-title">Fundación Cultural<br>Tierra de Gaviotas</h1>
-        <p class="lead">
-          Un equipo interdisciplinario que, desde 2017 en Ancud, Chiloé, construye
-          espacios donde las artes, la cultura y la comunidad son el fundamento principal.
+        <span class="label">Nuestra historia</span>
+        <h1 id="ph-title">Una fundación enraizada en Chiloé</h1>
+        <p class="page-hero__sub">
+          Ocho años construyendo espacios culturales desde Ancud.
         </p>
       </div>
     </section>
@@ -191,16 +193,39 @@
               en el norte y sur del archipiélago simbolizan libertad y protección del
               territorio insular.
             </p>
-            <div class="etimologia-box">
-              <p class="etimologia-box__title">Etimología Mapudungun</p>
-              <div class="etimologia-item">
-                <strong>Chelle</strong> = gaviota característica de la zona costera de Chiloé
+            <!-- CAMBIO 8 — Infografía editorial de etimología -->
+            <div class="etimologia-infografia" role="img" aria-label="Infografía: Chelle (gaviota) + Hue (lugar de) = Chilhué, raíz de Chiloé">
+              <div class="etim-palabra">
+                <span class="etim-num">01</span>
+                <span class="etim-mapudungun">Chelle</span>
+                <span class="etim-trad">Gaviota característica</span>
+                <span class="etim-contexto">de la costa de Chiloé</span>
               </div>
-              <div class="etimologia-item">
-                <strong>Hue</strong> = lugar de
+
+              <div class="etim-mas" aria-hidden="true">+</div>
+
+              <div class="etim-palabra">
+                <span class="etim-num">02</span>
+                <span class="etim-mapudungun">Hue</span>
+                <span class="etim-trad">Lugar de</span>
               </div>
-              <div class="etimologia-item">
-                <strong>Chilhué → Chiloé</strong> = "Lugar de gaviotas o chelles"
+
+              <div class="etim-flecha" aria-hidden="true">
+                <svg viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 12 L110 12" stroke="#FFB600" stroke-width="2"
+                        stroke-dasharray="4 4" fill="none"/>
+                  <path d="M110 12 L100 6 M110 12 L100 18" stroke="#FFB600"
+                        stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+              </div>
+
+              <div class="etim-resultado">
+                <span class="etim-resultado-lbl">Así nace</span>
+                <span class="etim-resultado-palabra">Chilhué</span>
+                <span class="etim-resultado-trad">
+                  "Lugar de gaviotas <em>o chelles</em>"
+                </span>
+                <span class="etim-resultado-nota">raíz mapudungun de la palabra Chiloé</span>
               </div>
             </div>
           </div>
@@ -215,33 +240,44 @@
           <div class="about-content reveal">
             <span class="label">Nuestra trayectoria</span>
             <h2 id="hist-title" class="heading-line">Una historia de vuelo propio</h2>
+            <!-- CAMBIO 9 — Timeline con identidad por hito -->
             <nav class="timeline" aria-label="Cronología de la fundación">
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2017</p>
                 <p class="timeline-title">El comienzo</p>
                 <p class="timeline-desc">Se forma el equipo fundador en Ancud, Chiloé, con el propósito de crear instancias culturales autogestionadas para la comunidad.</p>
               </div>
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--trova">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2018</p>
                 <p class="timeline-title">Primer Festival de Música Trova</p>
                 <p class="timeline-desc">Primera iniciativa realizada los días 20, 21 y 22 de febrero en la Plaza de Armas y Teatro Municipal de Ancud, con artistas como Evelyn Cornejo, Ángelo Escobar y Kaskivano. Fue el antecedente directo del Festival de Gaviotas.</p>
               </div>
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--festival">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2019</p>
                 <p class="timeline-title">Nace el Festival de Gaviotas</p>
                 <p class="timeline-desc">Primera edición del Festival de Gaviotas. Comienza el encuentro multicultural que se convertiría en la iniciativa más importante de la fundación.</p>
               </div>
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2020–2021</p>
                 <p class="timeline-title">Crecimiento y nuevos programas</p>
-                <p class="timeline-desc">Inicia Gaviotas on the Rock (2021), Gaviotas al Estrecho, clínicas de batería vía streaming y el trabajo de vinculación territorial con escuelas rurales.</p>
+                <p class="timeline-desc">Inicia Gaviotas on the Rock (2021), Gaviotas al Estrecho, una
+                  <a href="[PLACEHOLDER: URL YouTube Clínica Batería 2020]"
+                     target="_blank" rel="noopener noreferrer"
+                     class="link-video">clínica de batería vía streaming</a>
+                  con Ignacio Oyarzún, y el trabajo de vinculación territorial con escuelas rurales.</p>
               </div>
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2022</p>
                 <p class="timeline-title">Constitución legal</p>
                 <p class="timeline-desc">El 17 de octubre de 2022 se constituye legalmente la Fundación Cultural Tierra de Gaviotas (Inscripción N° 336270, SRCeI). Esta consolidación jurídica abre nuevas puertas de financiamiento y alianzas.</p>
               </div>
-              <div class="timeline-item">
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
                 <p class="timeline-year">2023–2025</p>
                 <p class="timeline-title">Consolidación institucional</p>
                 <p class="timeline-desc">Obtención de registros oficiales: Ministerio de las Culturas (N°589), Ministerio de Hacienda, GORE Los Lagos (N°3174). Embajada cultural internacional con Jorge Alvarado en México. Festival edición especial diciembre 2025.</p>
@@ -504,7 +540,7 @@
           </nav>
         </div>
         <nav aria-label="Mapa del sitio"><p class="footer__col-title">Sitio web</p><ul class="footer__nav"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="programas.html">Programas</a></li><li><a href="voluntariado.html">Voluntariado</a></li><li><a href="noticias.html">Noticias</a></li><li><a href="donaciones.html">Apóyanos</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
-        <nav aria-label="Programas"><p class="footer__col-title">Programas</p><ul class="footer__nav"><li><a href="programas.html#festival">Festival de Gaviotas</a></li><li><a href="programas.html#rock">Gaviotas on the Rock</a></li><li><a href="programas.html#talleres">Talleres Gratuitos</a></li><li><a href="programas.html#vinculacion">Vinculación Territorial</a></li><li><a href="nosotros.html#acreditaciones">Transparencia</a></li></ul></nav>
+        <nav aria-label="Programas"><p class="footer__col-title">Programas</p><ul class="footer__nav"><li><a href="programas.html#festival">Festival de Gaviotas</a></li><li><a href="programas.html#rock">Gaviotas on the Rock</a></li><li><a href="programas.html#talleres">Talleres Gratuitos</a></li><li><a href="programas.html#borderline">Borderline_CL</a></li><li><a href="programas.html#vinculacion">Vinculación Territorial</a></li><li><a href="nosotros.html#acreditaciones">Transparencia</a></li></ul></nav>
         <div><p class="footer__col-title">Contacto</p><ul class="footer__contact-list"><li class="footer__contact-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:contacto@tierradegaviotas.cl">contacto@tierradegaviotas.cl</a></li><li class="footer__contact-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="https://wa.me/56991042738" target="_blank" rel="noopener noreferrer">+56 9 9104 2738 (WhatsApp)</a></li></ul></div>
       </div>
     </div>

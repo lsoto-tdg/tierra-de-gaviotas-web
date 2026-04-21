@@ -36,11 +36,12 @@
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600family=Orbitron:wght@600;700;800family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600family=Playfair+Display:ital,wght@0,400;0,700;1,400family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/components-v2.css">
   <link rel="stylesheet" href="css/responsive.css">
 
   <!-- Schema.org JSON-LD -->
@@ -119,6 +120,7 @@
           <li><a href="programas.html"    class="navbar__link">Programas</a></li>
           <li><a href="voluntariado.html" class="navbar__link">Voluntariado</a></li>
           <li><a href="noticias.html"     class="navbar__link">Noticias</a></li>
+          <li><a href="manual-grafico.html" class="navbar__link">Manual gráfico</a></li>
           <li><a href="contacto.html"     class="navbar__link">Contacto</a></li>
         </ul>
         <a href="donaciones.html" class="btn btn--ambar navbar__cta">Apóyanos</a>
@@ -313,6 +315,25 @@
             </div>
           </article>
 
+          <!-- Borderline_CL — CAMBIO 5 -->
+          <article class="card-programa card-programa--borderline reveal reveal-delay-3">
+            <div class="card-programa__img" style="background: var(--bdln-space-deep, #0A1028); min-height: 160px; display: flex; align-items: center; justify-content: center;">
+              <span class="card-programa__tag">Espacio de recreación</span>
+              <span style="font-family: 'Orbitron', sans-serif; font-size: 2.2rem; font-weight: 800; background: linear-gradient(180deg,#F5F7FA 0%,#C8CDD4 40%,#8A8E96 100%); -webkit-background-clip: text; background-clip: text; color: transparent; position: relative; z-index: 2;">BDLN</span>
+            </div>
+            <div class="card-programa__body">
+              <h3 class="card-programa__title">Borderline_CL</h3>
+              <p class="card-programa__desc">
+                Un espacio en Ancud donde la fiesta se convierte en cultura
+                gratuita para toda la comunidad.
+              </p>
+            </div>
+            <div class="card-programa__footer">
+              <span class="card-programa__editions">Cada capítulo es único</span>
+              <a href="programas.html#borderline" class="card-programa__link">Explorar →</a>
+            </div>
+          </article>
+
         </div>
 
         <div class="text-center" style="margin-top: 2.5rem;">
@@ -440,50 +461,70 @@
       </div>
     </section>
 
-    <!-- ───── 9. APOYOS INSTITUCIONALES ───── -->
-    <section class="apoyos" id="apoyos" aria-labelledby="apoyos-title">
+    <!-- ───── 9. ALIADOS TECNOLÓGICOS — CAMBIO 6 ───── -->
+    <section class="section bg-crema" id="aliados" aria-labelledby="aliados-title">
       <div class="container">
         <header class="section-header reveal">
-          <span class="label">Infraestructura digital</span>
-          <h2 id="apoyos-title" class="heading-line heading-line--center">Aliados tecnológicos</h2>
+          <span class="label">Respaldo tecnológico</span>
+          <h2 id="aliados-title" class="heading-line heading-line--center">Aliados tecnológicos</h2>
           <p class="lead">
-            Operamos con herramientas de clase mundial gracias al respaldo de programas
-            nonprofit de empresas tecnológicas líderes globales.
+            Operamos con infraestructura de clase mundial gracias a los
+            programas nonprofit de estas organizaciones.
           </p>
         </header>
 
-        <div class="apoyos__logos">
-          <div class="apoyo-item" data-tooltip="Google for Nonprofits — Google Workspace y herramientas de productividad">
-            <div class="apoyo-item__icon" aria-hidden="true">🔵</div>
-            <p class="apoyo-item__name">Google</p>
-            <p class="apoyo-item__programa">for Nonprofits</p>
-          </div>
-          <div class="apoyo-item" data-tooltip="Microsoft for Nonprofits — Azure cloud USD $2.000 créditos anuales">
-            <div class="apoyo-item__icon" aria-hidden="true">🟦</div>
-            <p class="apoyo-item__name">Microsoft</p>
-            <p class="apoyo-item__programa">for Nonprofits</p>
-          </div>
-          <div class="apoyo-item" data-tooltip="Cloudflare Project Galileo — Hosting, seguridad y CDN global">
-            <div class="apoyo-item__icon" aria-hidden="true">🟠</div>
-            <p class="apoyo-item__name">Cloudflare</p>
-            <p class="apoyo-item__programa">Project Galileo</p>
-          </div>
-          <div class="apoyo-item" data-tooltip="Canva for Nonprofits — Diseño gráfico y comunicaciones">
-            <div class="apoyo-item__icon" aria-hidden="true">🎨</div>
-            <p class="apoyo-item__name">Canva</p>
-            <p class="apoyo-item__programa">for Nonprofits</p>
-          </div>
-          <div class="apoyo-item" data-tooltip="Okta for Good — Identidad digital y seguridad de acceso">
-            <div class="apoyo-item__icon" aria-hidden="true">🔐</div>
-            <p class="apoyo-item__name">Okta</p>
-            <p class="apoyo-item__programa">for Good</p>
-          </div>
-          <div class="apoyo-item" data-tooltip="Adobe Creative Cloud for Nonprofits — Diseño y producción audiovisual">
-            <div class="apoyo-item__icon" aria-hidden="true">🔴</div>
-            <p class="apoyo-item__name">Adobe</p>
-            <p class="apoyo-item__programa">for Nonprofits</p>
-          </div>
+        <div class="aliados-grid reveal reveal-delay-1">
+          <a href="https://www.google.com/nonprofits/"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Google for Nonprofits">
+            <img src="images/aliados/google-mono.svg" alt="Google" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Google</span>
+            <span class="aliado-card__program">for Nonprofits</span>
+          </a>
+          <a href="https://www.microsoft.com/es-cl/nonprofits"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Microsoft for Nonprofits">
+            <img src="images/aliados/microsoft-mono.svg" alt="Microsoft" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Microsoft</span>
+            <span class="aliado-card__program">for Nonprofits</span>
+          </a>
+          <a href="https://www.cloudflare.com/galileo/"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Cloudflare Project Galileo">
+            <img src="images/aliados/cloudflare-mono.svg" alt="Cloudflare" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Cloudflare</span>
+            <span class="aliado-card__program">Project Galileo</span>
+          </a>
+          <a href="https://www.canva.com/canva-for-nonprofits/"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Canva for Nonprofits">
+            <img src="images/aliados/canva-mono.svg" alt="Canva" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Canva</span>
+            <span class="aliado-card__program">for Nonprofits</span>
+          </a>
+          <a href="https://www.okta.com/okta-for-good/"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Okta for Good">
+            <img src="images/aliados/okta-mono.svg" alt="Okta" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Okta</span>
+            <span class="aliado-card__program">for Good</span>
+          </a>
+          <a href="https://www.adobe.com/corporate-responsibility.html"
+             target="_blank" rel="noopener noreferrer"
+             class="aliado-card" aria-label="Adobe for Nonprofits">
+            <img src="images/aliados/adobe-mono.svg" alt="Adobe" class="aliado-card__logo" loading="lazy">
+            <span class="aliado-card__name">Adobe</span>
+            <span class="aliado-card__program">for Nonprofits</span>
+          </a>
         </div>
+
+        <!--
+          NOTA: Los logos son SVG placeholder con el nombre del servicio.
+          Para reemplazar por logos oficiales:
+          1. Descargar logo monocromático oficial de cada servicio (SVG)
+          2. Subirlo a images/aliados/ con el mismo nombre
+          3. Commit en GitHub.com → listo
+        -->
       </div>
     </section>
 
@@ -566,6 +607,7 @@
             <li><a href="programas.html#rock">Gaviotas on the Rock</a></li>
             <li><a href="programas.html#estrecho">Gaviotas al Estrecho</a></li>
             <li><a href="programas.html#talleres">Talleres Gratuitos</a></li>
+            <li><a href="programas.html#borderline">Borderline_CL</a></li>
             <li><a href="programas.html#vinculacion">Vinculación Territorial</a></li>
             <li><a href="nosotros.html#acreditaciones">Transparencia</a></li>
           </ul>
