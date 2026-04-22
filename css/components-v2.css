@@ -1137,3 +1137,192 @@
   text-align: center;
   letter-spacing: 0.05em;
 }
+
+
+/* ===============================================================
+   V3 — CAMBIO 1: CLASES EXTRAÍDAS DE OVERRIDES INLINE
+   =============================================================== */
+
+/* ---------------------------------------------------------------
+   BDLN logo tipografía — Orbitron como fallback de "Dune"
+
+   TIPOGRAFÍA OFICIAL BDLN: "Dune" (no disponible en Google Fonts).
+   El logo oficial es el texto "BDLN" en Dune con el ancho de las
+   letras aumentado (tracking). Orbitron se usa como fallback web
+   libre hasta que se implemente la versión @font-face con el
+   archivo propietario.
+   Cuando el equipo entregue el .woff2 de Dune, reemplazar
+   'Orbitron' por 'Dune' en esta regla y agregar @font-face.
+   --------------------------------------------------------------- */
+.bdln-logo-text {
+  font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #F5F7FA 0%, #C8CDD4 40%, #8A8E96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------
+   Números circulares del proceso de voluntariado (paso 1, 2, 3)
+   --------------------------------------------------------------- */
+.volunteer-circle-number {
+  width: 64px;
+  height: 64px;
+  background: var(--color-ambar);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------
+   Preview tipográficos en manual-grafico.html
+   (reemplazan los font-family inline en los placeholders de logos)
+   --------------------------------------------------------------- */
+.manual-preview-text {
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 700;
+  /* font-family hereda de la tipografía global (--font-titulo / Cormorant Garamond) */
+}
+
+.manual-preview-fdg  { color: #B07BE8; font-size: 1.6rem; }
+.manual-preview-gotr { color: #CC2200; font-size: 1.5rem; letter-spacing: 0.05em; }
+.manual-preview-gae  { color: #7AB8D4; font-size: 1.5rem; }
+.manual-preview-trova { color: #E85D24; font-size: 1.8rem; }
+
+/* ===============================================================
+   V3 — CAMBIO 2: MANUAL GRÁFICO — NARRATIVA + SUBSECCIONES
+   =============================================================== */
+
+/* ---------------------------------------------------------------
+   Bloque narrativo histórico de la identidad TDG
+   --------------------------------------------------------------- */
+.manual-narrativa {
+  max-width: 880px;
+  margin: 0 auto var(--sp-16);
+  padding: var(--sp-8);
+  background: var(--color-blanco);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(53, 33, 18, 0.08);
+}
+
+.manual-narrativa__title {
+  font-family: var(--font-titulo);
+  color: var(--color-cafe);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.manual-narrativa__timeline {
+  display: grid;
+  gap: var(--sp-6);
+}
+
+@media (min-width: 768px) {
+  .manual-narrativa__timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.manual-narrativa__step {
+  position: relative;
+  padding-left: var(--sp-4);
+  border-left: 3px solid var(--color-ambar);
+}
+
+.manual-narrativa__year {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ambar);
+  margin-bottom: var(--sp-2);
+}
+
+.manual-narrativa__step h4 {
+  font-family: var(--font-titulo);
+  font-size: 1.2rem;
+  color: var(--color-cafe);
+  margin-bottom: var(--sp-2);
+  line-height: 1.2;
+}
+
+.manual-narrativa__step p {
+  font-size: 0.95rem;
+  color: var(--color-cafe-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------
+   Subsecciones del manual (Oficiales / En desarrollo)
+   --------------------------------------------------------------- */
+.manual-subsection {
+  margin-bottom: var(--sp-16);
+}
+
+.manual-subsection__title {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-cafe);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid var(--color-ambar);
+}
+
+.manual-subsection__intro {
+  color: var(--color-cafe-claro);
+  margin-bottom: var(--sp-8);
+  font-size: 1rem;
+}
+
+.manual-subsection--en-desarrollo .manual-subsection__title {
+  border-bottom-color: var(--color-cafe-claro);
+  opacity: 0.9;
+}
+
+/* ---------------------------------------------------------------
+   Estado "en desarrollo" — reemplaza el botón de descarga
+   en Trova 2018 y BDLN
+   --------------------------------------------------------------- */
+.manual-identidad__en-desarrollo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  background: rgba(107, 74, 42, 0.08);
+  border: 1px dashed rgba(107, 74, 42, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-cafe-claro);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: auto;
+  user-select: none;
+}
+
+/* Variante oscura para la tarjeta BDLN */
+.manual-identidad--bdln .manual-identidad__en-desarrollo {
+  background: rgba(200, 205, 212, 0.08);
+  border-color: rgba(200, 205, 212, 0.25);
+  color: var(--bdln-silver);
+  font-style: normal;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.08em;
+}
