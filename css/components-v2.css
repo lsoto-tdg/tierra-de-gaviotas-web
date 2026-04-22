@@ -1326,3 +1326,230 @@
   font-family: 'Courier New', monospace;
   letter-spacing: 0.08em;
 }
+
+
+/* ===============================================================
+   v4 — BDLN Figcaption tipografía (planetas en galería)
+   =============================================================== */
+.bdln-cap figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bdln-cap__num {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgba(200,205,212,0.7);
+}
+
+.bdln-cap__planet {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E8EAEE;
+  letter-spacing: 0.1em;
+}
+
+.bdln-cap__subtitle {
+  font-family: var(--font-cuerpo);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(212,165,116,0.85);
+}
+
+/* Variantes de color por planeta */
+.bdln-cap--frio  .bdln-cap__planet { color: #A8D8EA; }
+.bdln-cap--ignia .bdln-cap__planet { color: #F4A261; }
+
+
+/* ===============================================================
+   v4 — Lista de planetas conocidos (Manual Gráfico — BDLN)
+   =============================================================== */
+.bdln-planetas-conocidos {
+  margin-top: var(--sp-5);
+  padding: var(--sp-4);
+  background: rgba(10,16,40,0.6);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(200,205,212,0.1);
+}
+
+.bdln-planetas-titulo {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200,205,212,0.6);
+  margin-bottom: var(--sp-3);
+}
+
+.bdln-planetas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.bdln-planeta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid rgba(200,205,212,0.08);
+}
+
+.bdln-planeta:last-child {
+  border-bottom: none;
+}
+
+.bdln-planeta__num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(200,205,212,0.5);
+  min-width: 24px;
+}
+
+.bdln-planeta__name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #C8CDD4;
+  letter-spacing: 0.08em;
+}
+
+.bdln-planeta__desc {
+  font-family: var(--font-cuerpo);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(212,165,116,0.75);
+  margin-left: var(--sp-2);
+}
+
+.bdln-planeta--frio  .bdln-planeta__name { color: #A8D8EA; }
+.bdln-planeta--ignia .bdln-planeta__name { color: #F4A261; }
+
+
+/* ===============================================================
+   v4 — Video thumbnail (componente reutilizable)
+   =============================================================== */
+.video-thumbnail {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 16/9;
+  background: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.video-thumbnail__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.85);
+}
+
+.video-thumbnail:hover .video-thumbnail__img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.video-thumbnail__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.video-thumbnail:hover .video-thumbnail__play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Dentro de card-programa */
+.card-programa__video {
+  min-height: 180px;
+}
+
+.card-programa__video .video-thumbnail {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  height: 100%;
+  min-height: 180px;
+  aspect-ratio: unset;
+}
+
+/* Placeholder "pendiente" — no clickeable */
+.video-thumbnail--pendiente {
+  pointer-events: none;
+  cursor: default;
+}
+
+.video-thumbnail__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, rgba(53,33,18,0.08) 0%, rgba(53,33,18,0.03) 100%);
+  color: var(--color-cafe-claro);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+
+/* ===============================================================
+   v4 — Colaboraciones con video
+   =============================================================== */
+.colab-card--video .colab-card__img {
+  display: none;
+}
+
+.colab-card__media {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #0A0A0A;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.colab-card__media .video-thumbnail {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  height: 100%;
+  aspect-ratio: unset;
+}
+
+.colab-card__video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: var(--sp-3);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-ambar);
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.colab-card__video-link:hover {
+  color: var(--color-ambar);
+}
+
+.colab-card--pendiente {
+  opacity: 0.7;
+  border-style: dashed;
+}

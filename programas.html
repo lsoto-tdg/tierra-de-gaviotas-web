@@ -254,10 +254,30 @@
           </article>
 
           <article class="card-programa reveal reveal-delay-2" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,182,0,0.2);">
-            <div class="card-programa__img" style="min-height: 180px;">
+            <div class="card-programa__video">
               <span class="card-programa__tag">Online</span>
-              <!-- [PLACEHOLDER: Foto clínica streaming. Nombre: images/talleres/clinica-streaming.jpg] -->
-              <img src="images/talleres/clinica-streaming.jpg" alt="Clínica de Batería vía streaming — 2020" loading="lazy" data-placeholder-text="[PLACEHOLDER: Clínica Streaming 2020]">
+              <!--
+                ═══════════════════════════════════════════════════════
+                VIDEO — Clínica de Batería Online 2020 (Jorge Alvarado Torres)
+                Reemplazar [ID_VIDEO_YOUTUBE] con el ID real del video en YouTube.
+                Ejemplo: si la URL es https://www.youtube.com/watch?v=abc123XYZ
+                entonces el ID es abc123XYZ.
+                Thumbnail automático: https://img.youtube.com/vi/[ID_VIDEO_YOUTUBE]/hqdefault.jpg
+                ═══════════════════════════════════════════════════════
+              -->
+              <a href="https://www.youtube.com/watch?v=[ID_VIDEO_YOUTUBE]"
+                 target="_blank" rel="noopener noreferrer"
+                 class="video-thumbnail"
+                 aria-label="Ver Clínica de Batería Online 2020 — Jorge Alvarado Torres (YouTube)">
+                <img class="video-thumbnail__img"
+                     src="https://img.youtube.com/vi/[ID_VIDEO_YOUTUBE]/hqdefault.jpg"
+                     alt="Clínica de Batería vía streaming — Jorge Alvarado Torres, 2020"
+                     loading="lazy">
+                <svg class="video-thumbnail__play" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 .06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#FF0000" transform="translate(26,16)"/>
+                  <polygon points="45,24 27,14 27,34" fill="#FFFFFF" transform="translate(26,16)"/>
+                </svg>
+              </a>
             </div>
             <div class="card-programa__body">
               <h3 class="card-programa__title" style="color: var(--color-blanco);">Clínica de Batería Online (2020)</h3>
@@ -315,19 +335,29 @@
               <img src="images/borderline/capitulo-1.jpg"
                    alt="Capítulo I de Borderline_CL en Ancud"
                    loading="lazy">
-              <figcaption>Capítulo I</figcaption>
+              <figcaption>
+                <span class="bdln-cap__num">Capítulo I</span>
+                <span class="bdln-cap__planet">[PLACEHOLDER: Nombre del primer planeta]</span>
+              </figcaption>
             </figure>
-            <figure class="bdln-cap">
+            <figure class="bdln-cap bdln-cap--frio">
               <img src="images/borderline/capitulo-2.jpg"
                    alt="Capítulo II de Borderline_CL en Ancud"
                    loading="lazy">
-              <figcaption>Capítulo II</figcaption>
+              <figcaption>
+                <span class="bdln-cap__num">Capítulo II</span>
+                <span class="bdln-cap__planet">El planeta helado</span>
+              </figcaption>
             </figure>
-            <figure class="bdln-cap">
+            <figure class="bdln-cap bdln-cap--ignia">
               <img src="images/borderline/capitulo-3.jpg"
                    alt="Capítulo III de Borderline_CL en Ancud"
                    loading="lazy">
-              <figcaption>Capítulo III</figcaption>
+              <figcaption>
+                <span class="bdln-cap__num">Capítulo III</span>
+                <span class="bdln-cap__planet">IGNIA</span>
+                <span class="bdln-cap__subtitle">El planeta del eterno verano</span>
+              </figcaption>
             </figure>
           </div>
           <!--
@@ -424,13 +454,25 @@
           </p>
         </header>
 
-        <!-- CAMBIO 10 — Colaboraciones con foto -->
+        <!-- CAMBIO 10 — Colaboraciones con video YouTube -->
         <div class="colaboraciones-grid reveal reveal-delay-1">
-          <article class="colab-card">
-            <div class="colab-card__img">
-              <img src="images/colaboraciones/manuel-garcia.jpg"
-                   alt="Producción técnica de TDG para Manuel García en Chiloé"
-                   loading="lazy">
+
+          <!-- Card 1: Manuel García — video real -->
+          <article class="colab-card colab-card--video">
+            <div class="colab-card__media">
+              <a href="https://www.youtube.com/watch?v=CK1GXlU0ayM"
+                 target="_blank" rel="noopener noreferrer"
+                 class="video-thumbnail"
+                 aria-label="Ver video de Manuel García con producción TDG (YouTube)">
+                <img class="video-thumbnail__img"
+                     src="https://img.youtube.com/vi/CK1GXlU0ayM/hqdefault.jpg"
+                     alt="Manuel García — producción técnica y audiovisual TDG en Chiloé"
+                     loading="lazy">
+                <svg class="video-thumbnail__play" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 .06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#FF0000" transform="translate(26,16)"/>
+                  <polygon points="45,24 27,14 27,34" fill="#FFFFFF" transform="translate(26,16)"/>
+                </svg>
+              </a>
             </div>
             <div class="colab-card__body">
               <p class="colab-card__tag">Artista</p>
@@ -439,40 +481,79 @@
                 Producción técnica y audiovisual para el reconocido cantautor
                 chileno durante su paso por Chiloé.
               </p>
+              <a href="https://www.youtube.com/watch?v=CK1GXlU0ayM"
+                 target="_blank" rel="noopener noreferrer"
+                 class="colab-card__video-link"
+                 aria-label="Ver video de Manuel García en YouTube">
+                <svg fill="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Ver en YouTube
+              </a>
             </div>
           </article>
 
-          <article class="colab-card">
-            <div class="colab-card__img">
-              <img src="images/colaboraciones/municipalidad-ancud.jpg"
-                   alt="Evento municipal con producción de TDG en Ancud"
-                   loading="lazy">
+          <!-- Card 2: Festival de Gaviotas por Tomy — video con placeholder -->
+          <article class="colab-card colab-card--video">
+            <div class="colab-card__media">
+              <!--
+                ═══════════════════════════════════════════════════════
+                VIDEO — Festival de Gaviotas por Tomy
+                Reemplazar [ID_VIDEO_FDG_TOMY] con el ID del video en YouTube.
+                Thumbnail automático: https://img.youtube.com/vi/[ID_VIDEO_FDG_TOMY]/hqdefault.jpg
+                ═══════════════════════════════════════════════════════
+              -->
+              <a href="https://www.youtube.com/watch?v=[ID_VIDEO_FDG_TOMY]"
+                 target="_blank" rel="noopener noreferrer"
+                 class="video-thumbnail"
+                 aria-label="Ver video Festival de Gaviotas por Tomy (YouTube)">
+                <img class="video-thumbnail__img"
+                     src="https://img.youtube.com/vi/[ID_VIDEO_FDG_TOMY]/hqdefault.jpg"
+                     alt="Festival de Gaviotas — producción por Tomy"
+                     loading="lazy">
+                <svg class="video-thumbnail__play" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 .06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#FF0000" transform="translate(26,16)"/>
+                  <polygon points="45,24 27,14 27,34" fill="#FFFFFF" transform="translate(26,16)"/>
+                </svg>
+              </a>
             </div>
             <div class="colab-card__body">
-              <p class="colab-card__tag">Institución</p>
-              <h3 class="colab-card__title">Municipalidad de Ancud</h3>
+              <p class="colab-card__tag">Festival</p>
+              <h3 class="colab-card__title">Festival de Gaviotas por Tomy</h3>
               <p class="colab-card__desc">
-                Colaboración en eventos culturales municipales, escenografía
-                y producción técnica para instancias públicas.
+                <!-- [PLACEHOLDER: Descripción del video del Festival de Gaviotas por Tomy] -->
+                [PLACEHOLDER: Descripción breve del evento o video]
+              </p>
+              <a href="https://www.youtube.com/watch?v=[ID_VIDEO_FDG_TOMY]"
+                 target="_blank" rel="noopener noreferrer"
+                 class="colab-card__video-link"
+                 aria-label="Ver video Festival de Gaviotas por Tomy en YouTube">
+                <svg fill="currentColor" viewBox="0 0 24 24" style="width:14px;height:14px;" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Ver en YouTube
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Pendiente — sin video aún -->
+          <article class="colab-card colab-card--pendiente">
+            <div class="colab-card__media">
+              <div class="video-thumbnail video-thumbnail--pendiente" aria-hidden="true">
+                <div class="video-thumbnail__placeholder">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:40px;height:40px;opacity:0.5;" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M4 6h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z"/>
+                  </svg>
+                  Video próximamente
+                </div>
+              </div>
+            </div>
+            <div class="colab-card__body">
+              <!-- [PLACEHOLDER: Completar con próxima colaboración — artista, institución o evento] -->
+              <p class="colab-card__tag">Próximamente</p>
+              <h3 class="colab-card__title">[PLACEHOLDER: Nombre de la colaboración]</h3>
+              <p class="colab-card__desc">
+                [PLACEHOLDER: Descripción de la colaboración pendiente]
               </p>
             </div>
           </article>
 
-          <article class="colab-card">
-            <div class="colab-card__img">
-              <img src="images/colaboraciones/otros-artistas.jpg"
-                   alt="Producción técnica de TDG para artistas nacionales"
-                   loading="lazy">
-            </div>
-            <div class="colab-card__body">
-              <p class="colab-card__tag">Producción</p>
-              <h3 class="colab-card__title">Otros artistas nacionales</h3>
-              <p class="colab-card__desc">
-                <!-- [PLACEHOLDER: Agregar nombres de artistas nacionales con los que TDG ha colaborado en producción] -->
-                [PLACEHOLDER: Nombres de artistas nacionales con quienes TDG ha colaborado]
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
